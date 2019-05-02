@@ -15,7 +15,25 @@ public class Main {
     System.out.println("Is fair and good and wise in every way.");
     Scanner keyboard;
     keyboard = new Scanner(System.in);
-    
+    int userYear;
+    int userDay;
+    int userMonth;
+    int A;
+    int B;
+
+    while(true){
+        System.out.println("what day in "+giveMonth(userMonth)+"were u born?");
+        userDay = keyboard.nextInt();
+        System.out.println("Waht year were u born in?");
+        userYear = keyboard.nextInt();
+        System.out.println("There are "+ daysOfTheMonth(userMonth)+"days in"+giveMonth(userMonth)+".");
+        int tempIntValue = dayOfTheWeekMath(userDay, userMonth, userYear);
+        System.out.println("You were born on "+dayOfTheWeek(tempIntValue));
+        System.out.println("The poem says that you are"+poemLines(tempIntValue)+".");
+
+
+    }
+
 
 
 
