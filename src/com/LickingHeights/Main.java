@@ -21,16 +21,37 @@ public class Main {
 
     Scanner keyboard = new Scanner(System.in);
     }
+    public static int userMonth2(int userMonth){
+    switch (userMonth){
+        case 1:
+            return 13;
+        case 2:
+            return 14;
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+            return (userMonth);
+        default:
+            return(0);
 
+    }
+    }
 
-    public static int dayOfTheWeekMath(int userDay, int userMonth, int userYear){
-        userMonth = userMonth(userMonth);
-        if (userMonth>12){
+    public static int dayOfTheWeekMath(int userDay, int userMonth2, int userYear){
+        userMonth2 = userMonth2(userMonth2);
+        if (userMonth2>12){
             userYear==;
         }
         int A =(userYear%100);
         int B =(userYear/100);
-        int dayOfTheWeekMath = (userDay+(13*(userMonth+1))/5+A+(A/4)+(B/4)+(5*B));
+        int dayOfTheWeekMath = (userDay+(13*(userMonth2+1))/5+A+(A/4)+(B/4)+(5*B));
         dayOfTheWeekMath %=7;
         return dayOfTheWeekMath;
 
