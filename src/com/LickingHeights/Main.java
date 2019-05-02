@@ -62,35 +62,87 @@ public class Main {
 
        switch(dayOfTheWeekMath){
            case 0:
-               System.out.println("Saturday");
-               break;
+               return "Saturday";
            case 1:
-               System.out.println("Sunday");
-               break;
+               return"Sunday";
            case 2:
-               System.out.println("Monday");
-               break;
+               return"Monday";
            case 3:
-               System.out.println("Tuesday");
-               break;
+               return"Tuesday";
            case 4:
-               System.out.println("Wednesday");
-               break;
+               return"Wednesday";
            case 5:
-               System.out.println("Thursday");
-               break;
+               return"Thursday";
            case 6:
-               System.out.println("Friday");
-               break;
+               return"Friday";
            default:
-               return ("WARNING!");
+               return "WARNING!";
        }
 
     }
 
     
 
-    static void poemLine(){
+    public static String giveMonth(int userMonth){
+        switch(userMonth){
+            case 1:
+                return"January";
+            case 2:
+                return"February";
+            case 3:
+                return"March";
+            case 4:
+                return"April";
+            case 5:
+                return"May";
+            case 6:
+                return"June";
+            case 7:
+                return"July";
+            case 8:
+                return"August";
+            case 9:
+                return"September";
+            case 10:
+                return"October";
+            case 11:
+                return"November";
+            case 12:
+                return"December";
+                default:
+                    return"SKSK Wrong!";
 
+        }
+
+
+    }
+    public static int daysOfTheMonth(int userMonth){
+        switch (userMonth){
+            case 1:
+                return
+            case 2:
+                return
+            case 3:
+                return
+            case 4:
+                return
+            case 5:
+                return
+            case 6:
+                return
+            case 7:
+                return
+            case 8:
+                return
+            case 9:
+                return
+            case 10:
+                return
+            case 11:
+                return
+            case 12:
+                return 
+
+        }
     }
 }
