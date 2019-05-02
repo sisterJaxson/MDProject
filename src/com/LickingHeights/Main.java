@@ -13,13 +13,13 @@ public class Main {
     System.out.println("Saturday's child works hard for a living, ");
     System.out.println("But the child born on the Sabbath Day, ");
     System.out.println("Is fair and good and wise in every way.");
+    Scanner keyboard;
+    keyboard = new Scanner(System.in);
+    
 
 
 
 
-
-
-    Scanner keyboard = new Scanner(System.in);
     }
     public static int userMonth2(int userMonth){
     switch (userMonth){
@@ -119,30 +119,53 @@ public class Main {
     public static int daysOfTheMonth(int userMonth){
         switch (userMonth){
             case 1:
-                return
+                return 31;
             case 2:
-                return
+                return 28;
             case 3:
-                return
+                return 31;
             case 4:
-                return
+                return 30;
             case 5:
-                return
+                return 31;
             case 6:
-                return
+                return 30;
             case 7:
-                return
+                return 31;
             case 8:
-                return
+                return 31;
             case 9:
-                return
+                return 30;
             case 10:
-                return
+                return 31;
             case 11:
-                return
+                return 30;
             case 12:
-                return 
+                return 31;
 
         }
+        return daysOfTheMonth(userMonth);
+
     }
+    public static String poemLines(int dayOfTheWeekMath){
+        switch (dayOfTheWeekMath){
+            case 0:
+                return "Saturday's child works hard for a living";
+            case 1:
+                return "Sunday's child is fair and good and wise in every way";
+            case 2:
+                return "Monday's child is fair of face";
+            case 3:
+                return "Tuesday's child is full of grace";
+            case 4:
+                return "Wednesday's child is full of woe";
+            case 5:
+                return "Thursday's child is far to go";
+            case 6:
+                return "Friday's chile is loving and giving";
+
+        }
+        return "SKSK stop! warning!";
+    }
+
 }
