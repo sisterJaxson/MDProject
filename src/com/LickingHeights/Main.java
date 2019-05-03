@@ -5,34 +5,39 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    System.out.println("Monday's child is fair of face, ");
-    System.out.println("Tuesday's child is full of grace, ");
-    System.out.println("Wednesday's child is full of woe, ");
-    System.out.println("Thursday's child is far to go. ");
-    System.out.println("Friday's chile is loving and giving, ");
-    System.out.println("Saturday's child works hard for a living, ");
-    System.out.println("But the child born on the Sabbath Day, ");
-    System.out.println("Is fair and good and wise in every way.");
-    Scanner keyboard;
-    keyboard = new Scanner(System.in);
-    int userYear;
-    int userDay;
-    int userMonth;
-    int A;
-    int B;
 
-    while(true){
-        System.out.println("what day in "+giveMonth(userMonth)+"were u born?");
-        userDay = keyboard.nextInt();
-        System.out.println("Waht year were u born in?");
-        userYear = keyboard.nextInt();
-        System.out.println("There are "+ daysOfTheMonth(userMonth)+"days in"+giveMonth(userMonth)+".");
-        int tempIntValue = dayOfTheWeekMath(userDay, userMonth, userYear);
-        System.out.println("You were born on "+dayOfTheWeek(tempIntValue));
-        System.out.println("The poem says that you are"+poemLines(tempIntValue)+".");
+        System.out.println("Here is a poem that you can read");
+        System.out.println(" ");
+        System.out.println("Monday's child is fair of face, ");
+        System.out.println("Tuesday's child is full of grace, ");
+        System.out.println("Wednesday's child is full of woe, ");
+        System.out.println("Thursday's child is far to go. ");
+        System.out.println("Friday's chile is loving and giving, ");
+        System.out.println("Saturday's child works hard for a living, ");
+        System.out.println("But the child born on the Sabbath Day, ");
+        System.out.println("Is fair and good and wise in every way.");
+        Scanner keyboard;
+        keyboard = new Scanner(System.in);
+        int userYear;
+        int userDay;
+        int userMonth;
 
 
-    }
+        while(true){
+
+            System.out.println("What month were you born in(number)?");
+            userMonth = keyboard.nextInt();
+            System.out.println("what day in "+giveMonth(userMonth)+" were u born?");
+            userDay = keyboard.nextInt();
+            System.out.println("What year were u born in?");
+            userYear = keyboard.nextInt();
+            System.out.println("There are "+ daysOfTheMonth(userMonth)+" days in "+giveMonth(userMonth)+".");
+            int tempIntValue = dayOfTheWeekMath(userDay, userMonth, userYear);
+            System.out.println("You were born on "+dayOfTheWeek(tempIntValue));
+            System.out.println("The poem says that you are "+poemLines(tempIntValue)+".");
+
+
+        }
 
 
 
@@ -55,7 +60,7 @@ public class Main {
         case 10:
         case 11:
         case 12:
-            return (userMonth);
+            return userMonth;
         default:
             return(0);
 
@@ -65,10 +70,13 @@ public class Main {
     public static int dayOfTheWeekMath(int userDay, int userMonth2, int userYear){
         userMonth2 = userMonth2(userMonth2);
         if (userMonth2>12){
-            userYear==;
+            userYear --;
         }
+
+
         int A =(userYear%100);
         int B =(userYear/100);
+
         int dayOfTheWeekMath = (userDay+(13*(userMonth2+1))/5+A+(A/4)+(B/4)+(5*B));
         dayOfTheWeekMath %=7;
         return dayOfTheWeekMath;
@@ -180,10 +188,11 @@ public class Main {
             case 5:
                 return "Thursday's child is far to go";
             case 6:
-                return "Friday's chile is loving and giving";
+                return "Friday's child is loving and giving";
 
         }
         return "SKSK stop! warning!";
     }
+
 
 }
